@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl : 'https://app-manga-list.herokuapp.com/api'
 };
