@@ -1,4 +1,4 @@
 <h1>Mes mangas</h1>
 <div class="button" (click)="addIsOpen = !addIsOpen" [ngClass]="{'rotate':addIsOpen}">+</div>
-<app-manga-add *ngIf="addIsOpen" class="container"></app-manga-add>
+<app-manga-add *ngIf="addIsOpen" [ngClass]="{'addWidth':addIsOpen}" class="container"></app-manga-add>
 <app-manga-list></app-manga-list>

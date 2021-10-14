@@ -40,7 +40,7 @@ export class MangaAddComponent implements OnInit {
 
     console.log(this.myForm.value)
     if (this.myForm.valid){
-      this.cS.add<Manga>(this.myForm.value, this.url).subscribe(r => location.reload());
+      this.cS.add<Manga>(this.myForm.value).subscribe(r => location.reload());
 
     }
   }

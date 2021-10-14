@@ -5,13 +5,19 @@
   <img class="mangaImage"
        [src]="manga.imgUrl"
        [alt]="'image' + manga.name"
-        [ngClass]="{'littleCards':!isShow}">
-  <div class="modify" *ngIf="isShow" >
-    <img src="https://img.icons8.com/material-outlined/48/000000/edit--v1.png" alt='edit icon'>
-    <img (click)="delete()" src="https://img.icons8.com/material-rounded/48/fa314a/trash.png" alt="trash icon"/>
+       (mouseover)="lessBright($event)"
+       (mouseleave)="moreBright($event)">
+  <div class="edit"
+       *ngIf="isShow"
+       (mouseenter)="lessBrightEdit($event)">
+    <img
+
+      src="https://img.icons8.com/material-outlined/48/000000/edit--v1.png" alt='edit icon'>
+    <img
+      (click)="delete()"
+      src="https://img.icons8.com/material-rounded/48/fa314a/trash.png" alt="trash icon"/>
   </div>
-  <div class="mangaName">
-    <h2>{{manga.name}}</h2>
-  </div>
+  <h2 *ngIf="isShow"
+      (mouseover)="lessBrightH2($event)">{{manga.name}}</h2>
 </div>
 

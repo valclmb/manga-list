@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -8,15 +8,16 @@ import {HttpClient} from "@angular/common/http";
 export class CRUDService {
 
 
+  url = 'https://app-manga-list.herokuapp.com/api/mangas'
   constructor(private http: HttpClient) { }
 
   findAll<T>(url:string): Observable<T[]>{
-    return this.http.get<T[]>(url);
+    return this.http.get<T[]>(this.url + url,);
   }
-  add<T>(insert:T, url: string): Observable<T>{
-    return this.http.post<T>(url, insert)
+  add<T>(insert:T): Observable<T>{
+    return this.http.post<T>(this.url, insert)
   }
-  delete<T>(id:number, url: string): Observable<T> {
-    return this.http.delete<T>(`${url}/${id}`)
+  delete<T>(id:number): Observable<T> {
+    return this.http.delete<T>(`${this.url}/${id}`)
   }
 }

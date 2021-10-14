@@ -5,6 +5,7 @@ form{
   padding: 10px;
   border-radius: 20px;
   background-color: rgba(59, 117, 140, 0.24);
+  transition: width 5s;
 }
 section#text{
   display: flex;

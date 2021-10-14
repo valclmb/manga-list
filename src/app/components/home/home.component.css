@@ -19,3 +19,7 @@ div.button {
 .rotate {
   transform: rotate(45deg);
 }
+
+.addWidth {
+  width: 100%;
+}
