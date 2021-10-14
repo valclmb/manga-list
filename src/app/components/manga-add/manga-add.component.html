@@ -1,0 +1,27 @@
+<form [formGroup]="myForm" (ngSubmit)="addManga()">
+  <section id="text">
+    <div>
+      <label for="name">Nom du manga</label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="mangaUrl">Image</label>
+      <input id="mangaUrl" type="text" formControlName="imgUrl">
+    </div>
+  </section>
+  <section id="checkbox">
+    <div>
+      <label for="isRead">A jour</label>
+      <input id="isRead" type="checkbox" formControlName="isRead">
+    </div>
+    <div>
+      <label for="isStart">A lire</label>
+      <input id="isStart" type="checkbox" formControlName="isStart">
+    </div>
+    <div>
+      <label for="isOver">Manga terminé</label>
+      <input id="isOver" type="checkbox" formControlName="isOver">
+    </div>
+  </section>
+  <button type="submit">Ajouter</button>
+</form>

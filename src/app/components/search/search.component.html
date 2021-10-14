@@ -1,0 +1,12 @@
+<div class="container">
+  <div id="filter" >
+    <p
+      [id]="m.id"
+      *ngFor="let m of menu"
+      [ngClass]="{'selected':m.isSelect}"
+      (click)="select($event)"
+      >{{m.name}}
+    </p>
+  </div>
+  <div>Yes</div>
+</div>

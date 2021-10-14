@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #383838;
+  font-family: 'Source Code Pro', monospace;
+}
+.container {
+  display: block;
+  width: 1500px;
+  margin: auto;
+
+}

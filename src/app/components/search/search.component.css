@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+div#filter {
+  display: flex;
+}
+p{
+  color: black;
+  padding: 5px 20px;
+  background: rgba(255, 255, 255, 0.79);
+  font-size: 20px;
+  cursor:default ;
+}
+
+p:first-of-type,
+p:nth-of-type(2),
+p:nth-of-type(3){
+  border-right: 1px solid black;
+}
+p:first-of-type{
+  border-radius: 20px 0 0 20px;
+}
+
+p:last-of-type{
+  border-radius: 0 20px 20px 0;
+}
+.selected {
+  background: white;
+}
