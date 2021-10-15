@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { MangaListComponent } from './components/manga-list/manga-list.component';
 import {HttpClientModule} from "@angular/common/http";
-import { MangaAddComponent } from './components/manga-add/manga-add.component';
+import { MangaAddComponent } from './components/compo-manga/manga-add/manga-add.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { MangaComponent } from './components/manga/manga.component';
+import { MangaComponent } from './components/compo-manga/manga/manga.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { MangaComponent } from './components/manga/manga.component';
     HomeComponent,
     SearchComponent,
     MangaComponent,
+    ModalComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

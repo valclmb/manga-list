@@ -1,0 +1,15 @@
+p{
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+a:visited,
+a:link
+{
+  color: white;
+}
+a:active{
+  color: cyan;
+}
+

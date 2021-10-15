@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Manga} from '../../models/Manga';
-import {CRUDService} from "../../services/crud.service";
+import {Manga} from '../../../models/Manga';
+import {CRUDService} from "../../../services/crud.service";
 import {Router} from "@angular/router";
+import {environment} from "../../../../environments/environment";
 @Component({
   selector: 'app-manga',
   templateUrl: './manga.component.html',
@@ -20,14 +21,13 @@ export class MangaComponent implements OnInit {
 
   showIcons(): void{
     this.isShow = true;
-    console.log(this.isShow)
   }
   hideIcons() {
     this.isShow = false;
   }
 
   delete() {
-    this.cS.delete(this.manga.id).subscribe(r => location.reload())
+    this.cS.delete(this.manga.id, environment.apiUrl).subscribe(r => location.reload())
   }
 
   // CHANGE img.mangaImg brightness to 50%

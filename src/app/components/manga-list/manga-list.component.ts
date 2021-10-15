@@ -13,7 +13,7 @@ export class MangaListComponent implements OnInit {
   menu = [];
   menuSelect = 1;
   manga: Manga[] = [];
-  nameOn = false;
+  url = environment.apiUrl + '/mangas'
 
   constructor(private crudService: CRUDService) {
   }
@@ -25,7 +25,7 @@ export class MangaListComponent implements OnInit {
       // @ts-ignore
       this.menu.push(s);
     }
-    this.crudService.findAll<Manga>(``).subscribe(r => this.manga = r)
+    this.crudService.findAll<Manga>(`${this.url}`).subscribe(r => this.manga = r)
   }
 
   menuChange(): void {
@@ -36,15 +36,14 @@ export class MangaListComponent implements OnInit {
       }
     }
     if(this.menuSelect === 1) {
-      this.crudService.findAll<Manga>(``).subscribe(r => this.manga = r)
+      this.crudService.findAll<Manga>(`${this.url}`).subscribe(r => this.manga = r)
     } else if(this.menuSelect ===2){
-      this.crudService.findAll<Manga>(`?isRead=no`).subscribe(r => this.manga = r)
+      this.crudService.findAll<Manga>(`${this.url}?isRead=no`).subscribe(r => this.manga = r)
     } else if(this.menuSelect === 3){
-      this.crudService.findAll<Manga>(`?isRead=yes&isOver=no`).subscribe(r => this.manga = r)
+      this.crudService.findAll<Manga>(`${this.url}?isRead=yes&isOver=no`).subscribe(r => this.manga = r)
     } else if(this.menuSelect === 4 ) {
-      this.crudService.findAll<Manga>(`?isOver=yes`).subscribe(r => this.manga = r)
+      this.crudService.findAll<Manga>(`?${this.url}isOver=yes`).subscribe(r => this.manga = r)
     }
-  console.log(this.menuSelect)
   }
 
 }

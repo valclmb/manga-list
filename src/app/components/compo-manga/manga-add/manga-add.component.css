@@ -1,3 +1,6 @@
+p{
+  cursor: pointer;
+}
 form{
   display: flex;
   flex-direction: column;
@@ -39,4 +42,20 @@ button {
   border: none;
   padding: 5px 20px;
   border-radius: 20px;
+  cursor: pointer;
+}
+p{
+  color: white;
+}
+#add, #edit{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 20px;
+}
+#add {
+  background:greenyellow;
+}
+#edit{
+  background: red;
 }

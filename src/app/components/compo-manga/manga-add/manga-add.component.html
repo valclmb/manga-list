@@ -1,4 +1,7 @@
-<form [formGroup]="myForm" (ngSubmit)="addManga()">
+<p *ngIf="!isAddMode" routerLink="/">< Retourner à la liste de manga</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <h1 *ngIf="isAddMode">Ajouter un Manga</h1>
+  <h1 *ngIf="!isAddMode">Modifier un Manga</h1>
   <section id="text">
     <div>
       <label for="name">Nom du manga</label>
@@ -23,5 +26,7 @@
       <input id="isOver" type="checkbox" formControlName="isOver">
     </div>
   </section>
-  <button type="submit">Ajouter</button>
+  <button type="submit" *ngIf="isAddMode">Ajouter</button>
+  <button type="submit" *ngIf="!isAddMode">Modifier</button>
 </form>
+

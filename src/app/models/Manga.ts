@@ -1,9 +1,9 @@
 export interface Manga {
   id:number,
   name: string,
-  isRead: string,
-  isStart: string,
-  isOver: string
+  isRead: any,
+  isStart: any,
+  isOver: any
   imgUrl: string,
   dateEnd: Date
 }

@@ -23,3 +23,10 @@ div.button {
 .addWidth {
   width: 100%;
 }
+app-modal{
+  opacity: 0;
+  transition: opacity .5s;
+}
+.opacity {
+  opacity: 1;
+}

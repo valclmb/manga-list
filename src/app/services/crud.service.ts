@@ -8,16 +8,21 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class CRUDService {
 
 
-  url = 'https://app-manga-list.herokuapp.com/api/mangas'
   constructor(private http: HttpClient) { }
 
   findAll<T>(url:string): Observable<T[]>{
-    return this.http.get<T[]>(this.url + url,);
+    return this.http.get<T[]>(url);
   }
-  add<T>(insert:T): Observable<T>{
-    return this.http.post<T>(this.url, insert)
+  findOne<T>(id:number,url:string):Observable<T>{
+    return this.http.get<T>(`${url}/${id}`)
   }
-  delete<T>(id:number): Observable<T> {
-    return this.http.delete<T>(`${this.url}/${id}`)
+  add<T>(insert:T, url:string): Observable<T>{
+    return this.http.post<T>(url, insert)
+  }
+  delete<T>(id:number, url:string): Observable<T> {
+    return this.http.delete<T>(`${url}/${id}`)
+  }
+  edit(id: number, data:any, url:string): Observable<any>{
+    return this.http.put(`${url}/${id}`, data)
   }
 }

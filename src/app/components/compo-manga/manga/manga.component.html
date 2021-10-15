@@ -11,7 +11,7 @@
        *ngIf="isShow"
        (mouseenter)="lessBrightEdit($event)">
     <img
-
+      [routerLink]="[manga.id]"
       src="https://img.icons8.com/material-outlined/48/000000/edit--v1.png" alt='edit icon'>
     <img
       (click)="delete()"

@@ -8,11 +8,18 @@ import {Component, OnInit} from '@angular/core';
 export class HomeComponent implements OnInit{
 
   addIsOpen = false;
+  notSubmit!:boolean;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  isClose($event: any) {
+    this.notSubmit = $event
+    this.addIsOpen = $event
+    setTimeout(() => this.notSubmit = true, 5000)
+  }
 
 }
