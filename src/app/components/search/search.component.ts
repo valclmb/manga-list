@@ -20,6 +20,7 @@ export class SearchComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
 
+
   }
   ngOnChanges(): void {
 

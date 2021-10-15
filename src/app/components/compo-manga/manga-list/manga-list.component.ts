@@ -42,7 +42,7 @@ export class MangaListComponent implements OnInit {
     } else if(this.menuSelect === 3){
       this.crudService.findAll<Manga>(`${this.url}?isRead=yes&isOver=no`).subscribe(r => this.manga = r)
     } else if(this.menuSelect === 4 ) {
-      this.crudService.findAll<Manga>(`?${this.url}isOver=yes`).subscribe(r => this.manga = r)
+      this.crudService.findAll<Manga>(`${this.url}?isOver=yes`).subscribe(r => this.manga = r)
     }
   }
 
