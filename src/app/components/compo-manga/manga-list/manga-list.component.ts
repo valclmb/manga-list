@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {CRUDService} from "../../services/crud.service";
-import {Manga} from '../../models/Manga';
-import {environment} from "../../../environments/environment";
+import {CRUDService} from "../../../services/crud.service";
+import {Manga} from '../../../models/Manga';
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'app-manga-list',

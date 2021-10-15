@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
-import { MangaListComponent } from './components/manga-list/manga-list.component';
+import { MangaListComponent } from './components/compo-manga/manga-list/manga-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MangaAddComponent } from './components/compo-manga/manga-add/manga-add.component';
 import { HomeComponent } from './components/home/home.component';

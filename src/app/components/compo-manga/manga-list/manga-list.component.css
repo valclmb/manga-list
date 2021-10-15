@@ -1,0 +1,20 @@
+app-manga{
+  width: 30%;
+}
+div.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 992px) {
+  app-manga {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+  app-manga {
+    width: 49%;
+  }
+}

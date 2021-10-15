@@ -1,6 +1,6 @@
 <h1>Mes mangas</h1>
 <div class="button" (click)="addIsOpen = !addIsOpen" [ngClass]="{'rotate':addIsOpen}">+</div>
-<app-manga-add *ngIf="addIsOpen" [ngClass]="{'addWidth':addIsOpen}" class="container" (isOpenEmit)="isClose($event)"></app-manga-add>
+<app-manga-add *ngIf="addIsOpen" [ngClass]="{'addWidth':addIsOpen}" (isOpenEmit)="isClose($event)"></app-manga-add>
 <app-manga-list></app-manga-list>
 <app-footer></app-footer>
 <app-modal  [ngClass]="{'opacity':notSubmit === false}" (click)="notSubmit = true"></app-modal>

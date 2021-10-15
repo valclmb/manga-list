@@ -1,0 +1,6 @@
+<div class="container">
+  <app-search (click)="menuChange()"></app-search>
+  <div class="wrap">
+    <app-manga *ngFor="let m of manga" [manga]="m"></app-manga>
+  </div>
+</div>

@@ -1,9 +1,6 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-}
 div#filter {
   display: flex;
+  justify-content: center;
 }
 p{
   color: black;
