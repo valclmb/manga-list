@@ -1,0 +1,37 @@
+form{
+ text-align: center;
+}
+label,input,button {
+  font-size: 20px;
+}
+h1{
+  padding: 50px;
+  font-size: 50px;
+  color: white;
+}
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label{
+  color: white;
+}
+input {
+  width: 300px;
+  height: 35px;
+  border-radius: 25px;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  text-align: center;
+}
+button {
+  margin-top: 20px;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 50px;
+}
+button:active{
+  background-color: #c9d2f6;
+}

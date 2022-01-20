@@ -15,6 +15,7 @@ export class MangaListComponent implements OnInit {
   manga: Manga[] = [];
   url = environment.apiUrl + '/mangas'
 
+
   constructor(private crudService: CRUDService) {
   }
 

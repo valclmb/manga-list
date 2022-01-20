@@ -10,6 +10,7 @@ import {environment} from "../../../../environments/environment";
 })
 export class MangaComponent implements OnInit {
 
+  isConnect = localStorage.getItem('isConnected');
   @Input() manga!: Manga
 
 

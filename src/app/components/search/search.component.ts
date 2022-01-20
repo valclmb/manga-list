@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit, OnChanges {
   menu = [
     {name:'Tous',id:1,isSelect:true},
     {name:'A lire',id:2, isSelect:false},
-    {name:'En cours', id:3, isSelect: false},
+    {name:'A jour', id:3, isSelect: false},
     {name:'Lu',id:4,isSelect:false}
 
   ]

@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +6,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit{
 
+
   addIsOpen = false;
   notSubmit!:boolean;
-
+  isConnect = localStorage.getItem('isConnected');
   constructor() { }
 
   ngOnInit(): void {
@@ -22,4 +22,13 @@ export class HomeComponent implements OnInit{
     setTimeout(() => this.notSubmit = true, 5000)
   }
 
+  isConnected() {
+    let ls = localStorage.getItem("isConnected")
+
+  }
+
+  deconnection() {
+    localStorage.clear()
+    location.reload()
+  }
 }

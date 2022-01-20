@@ -7,6 +7,7 @@
        [alt]="'image' + manga.name"
        (mouseover)="lessBright($event)"
        (mouseleave)="moreBright($event)">
+  <div *ngIf="isConnect">
   <div class="edit"
        *ngIf="isShow"
        (mouseenter)="lessBrightEdit($event)">
@@ -16,6 +17,7 @@
     <img
       (click)="delete()"
       src="https://img.icons8.com/material-rounded/48/fa314a/trash.png" alt="trash icon"/>
+  </div>
   </div>
   <h2 *ngIf="isShow"
       (mouseover)="lessBrightH2($event)">{{manga.name}}</h2>

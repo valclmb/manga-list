@@ -2,6 +2,11 @@
 body {
   background: #383838;
   font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
 }
 .container {
   display: block;

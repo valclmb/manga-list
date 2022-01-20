@@ -12,6 +12,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { MangaComponent } from './components/compo-manga/manga/manga.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ConnectionComponent } from './components/connection/connection.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MangaComponent,
     ModalComponent,
     FooterComponent,
+    ConnectionComponent,
   ],
   imports: [
     BrowserModule,
